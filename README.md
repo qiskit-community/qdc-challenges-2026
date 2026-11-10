@@ -1,3 +1,5 @@
+# IBM Quantum Developer Conference 2026
+
 ![QDC Banner](./QDC_banner.png "QDC Banner")
 
 Welcome to the IBM Quantum Developer Conference 2026! These challenges are designed to test your quantum computing skills using the Qiskit product features announced during QDC. The competition spans three days and features two challenge tracks.
@@ -46,7 +48,13 @@ Welcome to the IBM Quantum Developer Conference 2026! These challenges are desig
 
 ## Installation and Setup
 
-### TODO
+To participate, please complete the setup instructions outlined in the [INSTALL.md](./INSTALL.md) file of this repository before the challenges begin. Remember to bring a laptop with internet access, as no devices will be provided at the venue.
+
+To get your IBM Quantum _access credentials_ and join your team at the event, use the following steps:
+1. Meet your team (assigned at check-in).
+2. Join the [Qiskit Slack](https://qisk.it/join-slack) and the QDC 2026 challenges channel (**channel TBD**).
+3. Retrieve your team access credentials (**contact TBD**).
+4. Set `TEAM_NAME` in the team cell of each challenge notebook. Every member of a team uses the same name, and submissions are only graded for a team.
 
 
 ## Challenge Rules
@@ -59,7 +67,7 @@ Throughout QDC, attendees will have the opportunity to participate in hands-on c
 
 These challenges are designed to help you practice using the latest tools and features highlighted in the seminars. There is no single path to the right solution, so participants are encouraged to think creatively and explore different approaches to extract maximum performance from the hardware and software tools. The challenge creators, Qiskit developers, and members of IBM’s Quantum Algorithm Engineering team will be available throughout the event to offer guidance and discuss ideas.
 
-You’ll work in Jupyter notebooks, which are available in this dedicated GitHub repository. To ensure the best possible experience, please complete the preparation steps outlined in the repository’s README before the event.
+You’ll work in Jupyter notebooks, which are available in this dedicated GitHub repository. To ensure the best possible experience, please complete the [Installation and Setup](#installation-and-setup) steps above before the event.
 
 Each day will include dedicated time to work on challenges. Your team will be assigned to one of two tracks, each covering a diverse range of application domains to accommodate different skills and interests. Leaderboards will display team scores for each challenge in real time. At the end of the event, awards will be given on a per-track basis—the team with the highest overall score across all challenges in each track will win.
 
@@ -67,15 +75,45 @@ Participants will have until Friday, November 13, at 13:00 ET to submit their so
 
 The challenge notebooks can be found in their respective Track folders. See below for a summary of the topics covered by each challenge:
 
-### [Track A](https://github.com/qiskit-community/qdc-challenges-2025/tree/main/challenges/Track_A) (Location TBD)
-- #### TBD
+### [Track A](./challenges/Track_A) (Location TBD)
+- Quantum dynamics: [Resolve Prethermal Floquet Structure](./challenges/Track_A/floquet-dynamics/floquet_challenge.ipynb)
+- System properties: [Proteasome Challenge: A Guided Laboratory in Molecular Electronic Structure](./challenges/Track_A/proteasome-inhibitor/proteasome_challenge.ipynb)
+- Optimization: [Trade Circuits for Shots](./challenges/Track_A/fourier-LCU-QAOA/fourier_LCU_QAOA_challenge.ipynb)
+- QEC methods: [Sampling Hard Circuits with Verifiably High Fidelity](./challenges/Track_A/verifiability/verifiability_challenge.ipynb)
 
-### [Track B](https://github.com/qiskit-community/qdc-challenges-2025/tree/main/challenges/Track_B) (Location TBD)
-- #### TBD
+### [Track B](./challenges/Track_B) (Location TBD)
+- Quantum dynamics: [Estimate a 56-Qubit Operator Loschmidt Echo (OLE)](./challenges/Track_B/ole/operator_loschmidt_echo_challenge.ipynb)
+- System properties: [Preparing Thermal States of Frustrated Quantum Spin Systems](./challenges/Track_B/thermal-states/thermal_states_challenge.ipynb)
+- Optimization: [Quantum Approximate Multi-Objective Optimization for Constrained Optimization Problems (C-QAMOO)](./challenges/Track_B/qamoo/qamoo_challenge.ipynb)
+- QEC methods: [Realizing Error Suppression in Partially Fault-Tolerant Quantum Simulations with the Iceberg Code](./challenges/Track_B/ising-with-iceberg/ising_challenge.ipynb)
+
+### Repository structure
+
+```
+qdc-challenges-2026/
+├── README.md
+├── INSTALL.md                # setup guide
+├── contest_rules.md
+├── requirements.txt          # shared dependencies for all challenges
+├── cheatsheet/               # tools, techniques and troubleshooting guides
+└── challenges/
+    ├── Track_A/
+    │   ├── floquet-dynamics/
+    │   ├── proteasome-inhibitor/
+    │   ├── fourier-LCU-QAOA/
+    │   └── verifiability/
+    └── Track_B/
+        ├── ole/
+        ├── thermal-states/
+        ├── qamoo/
+        └── ising-with-iceberg/
+```
+
+Each challenge folder contains its `*_challenge.ipynb` notebook together with the helper code, data and figures that notebook needs.
 
 
 ## Learning Resources
 
-The seminars and challenges at QDC are designed to cover a broad range of advanced topics featuring Qiskit tools and capabilities. While participants are not expected to have a deep understanding of everything that will be covered we do recommend familiarizing yourself with the basics before attending the event. 
+The seminars and challenges at QDC are designed to cover a broad range of advanced topics featuring Qiskit tools and capabilities. While participants are not expected to have a deep understanding of everything that will be covered we do recommend familiarizing yourself with the basics before attending the event.
 
-See the [cheat sheet](./challenges_cheat_sheet.md) for more information and links to various resources which may help get you started.
+See the [cheat sheet](./cheatsheet/README.md) for more information and links to various resources which may help get you started. It maps common tasks to the relevant tools, with guides on [getting started](./cheatsheet/guides/getting-started.md), [techniques](./cheatsheet/guides/techniques.md), [testing and tips](./cheatsheet/guides/testing-and-tips.md) and [troubleshooting](./cheatsheet/guides/troubleshooting.md).

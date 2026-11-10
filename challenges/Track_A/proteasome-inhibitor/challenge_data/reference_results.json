@@ -1,0 +1,170 @@
+{
+  "tuning_grid": [
+    {
+      "label": "sqd_500",
+      "solver_method": "sqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 500,
+        "seed": 20260626
+      },
+      "trim_config": {}
+    },
+    {
+      "label": "sqd_800",
+      "solver_method": "sqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 800,
+        "seed": 20260626
+      },
+      "trim_config": {}
+    },
+    {
+      "label": "trim_500_r05",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 500,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.05,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    },
+    {
+      "label": "trim_500_r15",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 500,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.15,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    },
+    {
+      "label": "trim_500_r30",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 500,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.30,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    },
+    {
+      "label": "trim_800_r05",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 800,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.05,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    },
+    {
+      "label": "trim_800_r15",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 800,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.15,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    },
+    {
+      "label": "trim_800_r30",
+      "solver_method": "trimsqd",
+      "sqd_config": {
+        "classical_backend": "python",
+        "symmetrize_spin": true,
+        "n_batches": 5,
+        "iterations": 6,
+        "samples_per_batch": 3000,
+        "energy_tol": 1e-08,
+        "occupancies_tol": 1e-05,
+        "carryover_threshold": 0.0001,
+        "max_dim": 800,
+        "seed": 20260626
+      },
+      "trim_config": {
+        "trim_ratio": 0.30,
+        "max_strings_per_trim": 300,
+        "max_carryover": 400,
+        "sector_trim": false
+      }
+    }
+  ]
+}

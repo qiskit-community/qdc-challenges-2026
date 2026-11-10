@@ -1,0 +1,18 @@
+# Copy to .github/workflows/cheat-sheet.yml to check the cheat sheet on every pull request that touches it.
+# Set runs-on to a runner label that your GitHub organization provides.
+name: cheat-sheet
+on:
+  pull_request:
+    paths: ["cheat_sheet_2026/**"]
+  push:
+    branches: [main]
+    paths: ["cheat_sheet_2026/**"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 cheat_sheet_2026/tools/build_cheatsheet.py --check

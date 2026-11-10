@@ -1,0 +1,302 @@
+{
+  "ligand": "ixazomib",
+  "basis": "sto-3g",
+  "fci_threshold_used_for_migration": 10,
+  "sqd_threshold_used_for_migration": 20,
+  "assignments": [
+    {
+      "fragment_id": 0,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 1,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 2,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 3,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 4,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 5,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 6,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 7,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 8,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 9,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 10,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 11,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 12,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 13,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 14,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 15,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 16,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 17,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 18,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 19,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 20,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 21,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 22,
+      "solver": "CCSD",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 23,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 24,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 25,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 26,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 27,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 28,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 29,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 30,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 31,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 32,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 33,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 34,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 35,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 36,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 37,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 38,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 39,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 40,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    },
+    {
+      "fragment_id": 41,
+      "solver": "FCI",
+      "assignment_source": "frozen_classical_baseline",
+      "solver_config": null,
+      "measurement_provenance": null
+    }
+  ]
+}

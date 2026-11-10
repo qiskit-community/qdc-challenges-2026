@@ -1,0 +1,76 @@
+# Ixazomib isolated ligand — STO-3G  EWF+TrimSQD  Qiskit Serverless configuration
+#
+# System:  ixazomib bound-geometry extracted ligand (three-coordinate boronic acid)
+#          42 atoms  |  charge = 0  |  spin = 0
+#
+# Scaled from hpc_demos/proteasome_ewf_sqd_demo/config_ixazomib_ligand_sto-3g.yaml
+# with Serverless-specific adjustments:
+#   - n_shots reduced 1M → 100K  (QPU budget per fragment)
+#   - classical_backend: python   (only viable in Fleets container)
+#   - TrimSQD block added
+#   - qpu.provider: ibm_serverless (get_runtime_service() path, not QRMI)
+
+# ============================================================================
+# Workflow / Molecule
+# ============================================================================
+workflow:
+  basis: sto-3g
+  charge: 0
+  spin: 0
+
+# ============================================================================
+# Embedder
+# ============================================================================
+embedder:
+  ewf:
+    bath_type: mp2
+    truncation: 1.0e-4     # same as glycine (1e-5 is HPC; 1e-4 reduces container time)
+    fragmentation: iao
+
+# ============================================================================
+# Solver Selection  (three-tier: FCI / CCSD / quantum)
+# ============================================================================
+solver_selection:
+  fci_threshold: 10        # n_orb <= 10 → FCI (small H / CH fragments)
+  sqd_threshold: 20        # n_orb >= 20 → TrimSQD; in-between → CCSD
+                           # At threshold=15, 45% of fragments are SQD-eligible (19/42).
+                           # At threshold=20 that drops to 10/42 — only the fragments
+                           # where CCSD genuinely struggles (≥40 qubits).
+
+# ============================================================================
+# QPU Configuration
+# ============================================================================
+qpu:
+  provider: ibm_serverless  # uses get_runtime_service() inside Fleets
+  backend_name: ibm_kingston
+
+  sampler_options:
+    default_shots: 100000   # 100K shots/fragment (QPU budget)
+
+# ============================================================================
+# SQD / TrimSQD Classical Post-Processing
+# ============================================================================
+sqd:
+  lucj:
+    n_reps: 1
+
+  classical_backend: python   # only viable backend in Fleets base image
+  symmetrize_spin: true
+  n_batches: 5
+  iterations: 6
+  samples_per_batch: 3000
+  # Subspace cap: without this, trim_ratio=0.15 over 5 batches × 3000 samples
+  # produces ~1000+ unique strings/spin-sector → Davidson takes hours per iter.
+  # 500 strings keeps each solve_sci_batch call under 30s for norb≤25.
+  max_dim: 500
+  energy_tol: 1.0e-8
+  occupancies_tol: 1.0e-5
+  carryover_threshold: 1.0e-4   # used by standard SQD policy (not TrimSQD)
+
+  trim:
+    trim_ratio: 0.15
+    sector_trim: false
+    # Hard cap per batch before merging. 300 × 5 batches → merged pool ≤ 1500
+    # → trimmed to ~225 carryover strings → subspace ≤ 225α × 225β.
+    max_strings_per_trim: 300
+    max_carryover: 400

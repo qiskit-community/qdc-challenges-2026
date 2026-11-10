@@ -1,0 +1,407 @@
+# Vocabulary for the Tags line of every entry, and the task list of the landing page.
+# After editing, run: python3 tools/build_cheatsheet.py
+
+as_of = "2026-11"          # month the cheat sheet was last checked; "New and changing" counts back from it
+new_window_months = 6
+
+[documents]
+# Order of the documents in the landing page and the versions table.
+order = ["reference/qiskit-sdk.md", "reference/ibm-quantum-compute-client.md", "reference/noise-management.md", "reference/qiskit-addons.md", "reference/ibm-quantum-functions-catalog.md", "reference/managed-workflows.md", "reference/simulators.md", "reference/ecosystem.md", "reference/ai-tooling.md", "reference/hardware.md", "guides/getting-started.md", "guides/techniques.md", "guides/testing-and-tips.md", "guides/troubleshooting.md"]
+
+[[family]]
+id = "qaoa"
+title = "QAOA"
+short = "QAOA"
+description = "Quantum approximate optimization and its variants: linear-ramp and warm-start QAOA, constraint-preserving mixers, CVaR objectives, and angles trained classically or transferred between instances."
+
+[[family]]
+id = "multi-objective"
+title = "Multi-objective and constrained optimization"
+short = "Multi-objective"
+description = "Problems with several objectives or hard constraints: Pareto fronts and their hypervolume, scalarized sub-problems, and constraints evaluated on each candidate solution."
+
+[[family]]
+id = "lcu"
+title = "LCU and circuit ensembles"
+short = "LCU"
+description = "Methods that replace one deep circuit by a weighted ensemble of shallower circuits and pay in shots: linear combinations of unitaries sampled term by term, multi-product formulas, quasi-probability decompositions and circuit cutting."
+
+[[family]]
+id = "trotter"
+title = "Trotterized time evolution"
+short = "Trotter"
+description = "Hamiltonian simulation of spin and lattice models with Trotter circuits, and the methods that compress, extrapolate or mitigate them."
+
+[[family]]
+id = "floquet"
+title = "Floquet dynamics"
+short = "Floquet"
+description = "Periodically driven circuits, which repeat one layer many times, and their long-time, prethermal behavior."
+
+[[family]]
+id = "echoes"
+title = "Loschmidt echoes and scrambling"
+short = "Echoes"
+description = "Circuits that evolve forward, apply a small perturbation and evolve backward, such as operator Loschmidt echoes and out-of-time-order correlators, which measure how sensitive an observable is to the perturbation and how fast information spreads."
+
+[[family]]
+id = "thermal"
+title = "Thermal and dissipative states"
+short = "Thermal"
+description = "Preparing Gibbs-like or steady states, for example by engineered dissipation with mid-circuit resets, and measuring their observables."
+
+[[family]]
+id = "sqd"
+title = "Sample-based diagonalization and chemistry"
+short = "SQD"
+description = "Ground-state energies from sampled configurations (sample-based quantum diagonalization and its Krylov variant), LUCJ circuits, and embedding methods that split large molecules into fragments."
+
+[[family]]
+id = "verifiable"
+title = "Verifiable circuit sampling"
+short = "Verifiable sampling"
+description = "Sampling circuits that are hard to simulate and certifying their fidelity, for example by doping checked Clifford circuits with a few non-Clifford gates, estimating fidelity from sampled stabilizers and post-selecting on spacetime checks."
+
+[[family]]
+id = "detection"
+title = "Error detection and encoded circuits"
+short = "Error detection"
+description = "Small error-detecting codes and checks that flag errors so that shots can be post-selected, an early step toward fault tolerance."
+
+[[family]]
+id = "other"
+title = "Other application domains"
+short = "Other"
+description = "Partial differential equations, classification and finance, reached through application functions."
+
+[[family]]
+id = "general"
+title = "Used in every family"
+short = "General"
+description = "Tools that every workflow needs, such as the transpiler, the primitives and QPU budgeting. The family view leaves them out; the workflow view lists them."
+
+[[step]]
+id = "map"
+title = "Map the problem"
+short = "Map"
+description = "Turn the problem into circuits and operators: ansatzes, encodings, codes and benchmark circuits."
+
+[[step]]
+id = "optimize"
+title = "Optimize for the hardware"
+short = "Optimize"
+description = "Transpile, choose qubits, use native gates, shrink circuits and add error suppression."
+
+[[step]]
+id = "execute"
+title = "Execute"
+short = "Execute"
+description = "Run on hardware or simulators: primitives, execution modes, noise learning, QPU-time budgeting and the QPUs themselves."
+
+[[step]]
+id = "post-process"
+title = "Post-process results"
+short = "Post-process"
+description = "Turn shots into answers: expectation values, mitigation, post-selection, diagonalization and extrapolation."
+
+[[step]]
+id = "scale"
+title = "Scale out"
+short = "Scale"
+description = "Run classical work next to the QPUs with Managed Workflows, and use ready-made functions from the IBM Quantum Functions Catalog."
+
+[[step]]
+id = "develop"
+title = "Develop and debug"
+short = "Develop"
+description = "Test locally, simulate, save your work, grade answers and work with AI assistants."
+
+[[noise]]
+id = "suppression"
+title = "Error suppression"
+short = "Suppression"
+description = "Reduce errors as the circuit runs: dynamical decoupling, Pauli twirling and shallower circuits."
+
+[[noise]]
+id = "characterization"
+title = "Noise learning and characterization"
+short = "Characterization"
+description = "Measure the noise: learned Pauli-Lindblad models, fresh benchmarks and noise-impact estimates."
+
+[[noise]]
+id = "detection"
+title = "Error detection and post-selection"
+short = "Post-selection"
+description = "Flag shots hit by an error and discard them."
+
+[[noise]]
+id = "mitigation-expval"
+title = "Mitigation of expectation values"
+short = "Mitigation (expectation values)"
+description = "Correct expectation values after the run: TREX, ZNE, PEA, PEC and the methods that cut their cost."
+
+[[noise]]
+id = "mitigation-sampling"
+title = "Mitigation of sampling results"
+short = "Mitigation (sampling)"
+description = "Correct counts and sampled configurations: readout mitigation and sample-based diagonalization."
+
+[[runs]]
+id = "local"
+description = "Runs on your machine without an account"
+
+[[runs]]
+id = "account"
+description = "Needs an IBM Quantum account but no QPU time"
+
+[[runs]]
+id = "qpu"
+description = "Uses QPU time"
+
+[[runs]]
+id = "serverless"
+description = "Runs as a Managed Workflow (Qiskit Serverless), which needs a Premium, Flex or On-Prem plan"
+
+[[runs]]
+id = "premium"
+description = "Needs a Premium, Flex or On-Prem plan"
+
+[[status]]
+id = "stable"
+title = "Stable"
+description = "Released and supported."
+
+[[status]]
+id = "beta"
+title = "Beta"
+description = "IBM labels it beta; interfaces may change between releases."
+
+[[status]]
+id = "alpha"
+title = "Alpha"
+description = "Early 0.x releases; expect breaking changes."
+
+[[status]]
+id = "experimental"
+title = "Experimental"
+description = "An experimental feature, or a code base its authors call unstable."
+
+[[status]]
+id = "preview"
+title = "Preview"
+description = "A preview service with restricted access."
+
+[[task]]
+group = "Set up and get help"
+text = "Install the package versions my notebook needs"
+links = ["guides/getting-started.md#versions-and-environment"]
+
+[[task]]
+group = "Set up and get help"
+text = "Save my IBM Quantum API key and choose an instance"
+links = ["guides/getting-started.md#ibm-quantum-account"]
+
+[[task]]
+group = "Set up and get help"
+text = "Find the import line for a class or function"
+links = ["guides/testing-and-tips.md#api-quick-reference"]
+
+[[task]]
+group = "Set up and get help"
+text = "Fix an error message or an unexpected result"
+links = ["guides/troubleshooting.md"]
+
+[[task]]
+group = "Set up and get help"
+text = "Give my AI assistant Qiskit tools and documentation"
+links = ["guides/getting-started.md#setting-up-an-ai-assistant", "reference/ai-tooling.md#qiskit-mcp-servers", "reference/ai-tooling.md#documentation-for-agents"]
+
+[[task]]
+group = "Set up and get help"
+text = "Make my AI assistant ask before it submits or cancels jobs"
+links = ["reference/ai-tooling.md#qiskit-mcp-servers", "guides/getting-started.md#how-to-use-this-cheat-sheet"]
+
+[[task]]
+group = "Set up and get help"
+text = "Move my own older code to the client-side primitives"
+links = ["reference/ibm-quantum-compute-client.md#sampler-and-estimator-client-side-primitives", "reference/ai-tooling.md#qiskit-ai-skills"]
+
+[[task]]
+group = "Set up and get help"
+text = "Submit answers for grading"
+links = ["guides/getting-started.md#grading-with-qc-grader"]
+
+[[task]]
+group = "Build circuits"
+text = "Build Trotter or Floquet circuits for a spin model"
+links = ["reference/qiskit-sdk.md#circuit-library", "reference/qiskit-sdk.md#swap-strategies-for-commuting-gates", "reference/ibm-quantum-compute-client.md#fractional-gates"]
+
+[[task]]
+group = "Build circuits"
+text = "Solve an optimization problem with QAOA"
+links = ["reference/qiskit-sdk.md#circuit-library", "reference/ecosystem.md#qaoa-training-pipeline", "reference/ecosystem.md#quantum-optimization-best-practices-qopt-best-practices", "reference/qiskit-addons.md#optimization-mapper-qiskit-addon-opt-mapper", "reference/qiskit-sdk.md#swap-strategies-for-commuting-gates", "reference/qiskit-sdk.md#qubit-selection-and-layout", "guides/techniques.md#cvar-of-sampled-results"]
+
+[[task]]
+group = "Build circuits"
+text = "Replace a costly circuit block with a sampled ensemble of cheaper circuits"
+links = ["guides/techniques.md#sampling-a-linear-combination-of-unitaries", "reference/qiskit-addons.md#circuit-cutting-qiskit-addon-cutting"]
+
+[[task]]
+group = "Build circuits"
+text = "Estimate a ground-state energy from samples"
+links = ["reference/qiskit-addons.md#sample-based-quantum-diagonalization-qiskit-addon-sqd", "reference/ecosystem.md#chemistry-pyscf-and-ffsim", "reference/qiskit-addons.md#qiskit-fermions-qiskit-fermions"]
+
+[[task]]
+group = "Build circuits"
+text = "Load a published benchmark circuit"
+links = ["reference/ecosystem.md#reference-circuits-the-quantum-advantage-tracker"]
+
+[[task]]
+group = "Build circuits"
+text = "Measure or reset qubits in the middle of a circuit"
+links = ["reference/ibm-quantum-compute-client.md#dynamic-circuits-and-resets", "reference/ibm-quantum-compute-client.md#specially-calibrated-instructions-and-calibration-sets"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Choose a QPU"
+links = ["reference/hardware.md#qpus-at-a-glance", "reference/ecosystem.md#layout-ranking-with-mapomatic"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Pick the best physical qubits for my circuit"
+links = ["reference/qiskit-sdk.md#qubit-selection-and-layout", "reference/hardware.md#calibration-data-and-layer-fidelity", "reference/ecosystem.md#layout-ranking-with-mapomatic", "reference/ecosystem.md#device-benchmarking-qiskit-device-benchmarking"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Cut the depth or two-qubit gate count of a circuit"
+links = ["reference/qiskit-sdk.md#transpiler-preset-and-custom-pass-managers", "reference/qiskit-sdk.md#swap-strategies-for-commuting-gates", "reference/qiskit-sdk.md#ai-powered-transpiler-passes-qiskit-ibm-transpiler"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Run RZZ and RX rotations as single native gates"
+links = ["reference/ibm-quantum-compute-client.md#fractional-gates"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Shrink a circuit that is too deep or too wide for the hardware"
+links = ["reference/qiskit-addons.md#operator-backpropagation-qiskit-addon-obp", "reference/qiskit-addons.md#aqc-tensor-qiskit-addon-aqc-tensor", "reference/qiskit-addons.md#circuit-cutting-qiskit-addon-cutting"]
+
+[[task]]
+group = "Fit the hardware"
+text = "Reduce Trotter error without deeper circuits"
+links = ["reference/qiskit-addons.md#multi-product-formulas-qiskit-addon-mpf"]
+
+[[task]]
+group = "Test and budget"
+text = "Test my workflow without an account or QPU time"
+links = ["reference/ibm-quantum-compute-client.md#fake-backends-and-local-testing-mode", "reference/simulators.md#qiskit-aer", "guides/testing-and-tips.md#local-test-patterns"]
+
+[[task]]
+group = "Test and budget"
+text = "Simulate a circuit with mid-circuit resets, measurements or feed-forward"
+links = ["reference/simulators.md#qiskit-aer", "reference/simulators.md#exact-and-tensor-network-references"]
+
+[[task]]
+group = "Test and budget"
+text = "Get a reference value for a circuit too large to simulate exactly"
+links = ["reference/simulators.md#exact-and-tensor-network-references", "reference/simulators.md#qiskit-aer", "reference/qiskit-addons.md#propagated-noise-absorption-and-pauli-propagation"]
+
+[[task]]
+group = "Test and budget"
+text = "Check how much noise will hurt my circuit before a large run"
+links = ["reference/ibm-quantum-compute-client.md#neat-the-noisy-estimator-analyzer"]
+
+[[task]]
+group = "Test and budget"
+text = "Estimate QPU time before I submit"
+links = ["reference/ibm-quantum-compute-client.md#budgeting-qpu-time", "guides/testing-and-tips.md#count-the-executions-a-client-side-estimator-job-will-submit"]
+
+[[task]]
+group = "Test and budget"
+text = "See how much QPU time I have used or have left"
+links = ["reference/ibm-quantum-compute-client.md#budgeting-qpu-time", "guides/testing-and-tips.md#before-you-spend-qpu-time"]
+
+[[task]]
+group = "Test and budget"
+text = "Stop a duplicate job, or recover after a job cell ran twice"
+links = ["guides/testing-and-tips.md#before-you-spend-qpu-time", "reference/ibm-quantum-compute-client.md#saving-results-and-job-ids"]
+
+[[task]]
+group = "Run jobs"
+text = "Run many circuit variants or parameter sets with few jobs"
+links = ["reference/ibm-quantum-compute-client.md#sampler-and-estimator-client-side-primitives", "reference/ibm-quantum-compute-client.md#executor-and-quantumprogram", "reference/ibm-quantum-compute-client.md#execution-modes-job-batch-and-session"]
+
+[[task]]
+group = "Run jobs"
+text = "Recover a job instead of resubmitting it"
+links = ["reference/ibm-quantum-compute-client.md#saving-results-and-job-ids", "guides/testing-and-tips.md#retrieve-a-finished-job-instead-of-resubmitting-it"]
+
+[[task]]
+group = "Run jobs"
+text = "Share circuits between Qiskit versions"
+links = ["reference/qiskit-sdk.md#saving-circuits-with-qpy"]
+
+[[task]]
+group = "Run jobs"
+text = "Run long classical steps next to the QPU"
+links = ["reference/managed-workflows.md#write-upload-and-run-a-workflow", "reference/managed-workflows.md#fleets-runner-and-compute-profiles"]
+
+[[task]]
+group = "Run jobs"
+text = "Try a ready-made solver or error-mitigation service"
+links = ["reference/ibm-quantum-functions-catalog.md#using-the-ibm-quantum-functions-catalog", "reference/ibm-quantum-functions-catalog.md#circuit-functions", "reference/ibm-quantum-functions-catalog.md#application-functions"]
+
+[[task]]
+group = "Reduce noise"
+text = "Choose an error-mitigation method"
+links = ["guides/techniques.md#choosing-error-detection-and-mitigation"]
+
+[[task]]
+group = "Reduce noise"
+text = "Suppress decoherence, crosstalk and coherent errors"
+links = ["reference/ibm-quantum-compute-client.md#dynamical-decoupling-options", "reference/qiskit-sdk.md#dynamical-decoupling-passes", "reference/ibm-quantum-compute-client.md#twirling-options-in-the-primitives", "reference/noise-management.md#pauli-twirling-with-samplomatic"]
+
+[[task]]
+group = "Reduce noise"
+text = "Mitigate readout errors in counts or sampled distributions"
+links = ["reference/qiskit-addons.md#measurement-mitigation-with-m3-mthree"]
+
+[[task]]
+group = "Reduce noise"
+text = "Mitigate readout errors in expectation values"
+links = ["reference/ibm-quantum-compute-client.md#sampler-and-estimator-client-side-primitives", "reference/noise-management.md#qiskit-mitigation-trex-zne-pea-and-pec"]
+
+[[task]]
+group = "Reduce noise"
+text = "Mitigate gate errors in expectation values"
+links = ["reference/ibm-quantum-compute-client.md#sampler-and-estimator-client-side-primitives", "reference/noise-management.md#qiskit-mitigation-trex-zne-pea-and-pec", "reference/qiskit-addons.md#shaded-light-cones-qiskit-addon-slc", "reference/qiskit-addons.md#propagated-noise-absorption-and-pauli-propagation", "reference/ibm-quantum-functions-catalog.md#circuit-functions"]
+
+[[task]]
+group = "Reduce noise"
+text = "Discard shots hit by an error"
+links = ["reference/noise-management.md#post-selection-on-non-markovian-error-checks", "reference/qiskit-addons.md#spacetime-pauli-checks-qiskit-paulice", "guides/techniques.md#the-iceberg-code"]
+
+[[task]]
+group = "Reduce noise"
+text = "Learn a noise model for the layers of my circuit"
+links = ["reference/ibm-quantum-compute-client.md#noiselearnerv3", "reference/noise-management.md#custom-noise-learning-qiskit-noise-learning"]
+
+[[task]]
+group = "Analyze results"
+text = "Turn shot data into expectation values"
+links = ["reference/qiskit-addons.md#expectation-values-from-shot-data"]
+
+[[task]]
+group = "Analyze results"
+text = "Estimate the fidelity of a Clifford circuit on hardware"
+links = ["guides/techniques.md#fidelity-of-a-clifford-circuit-from-sampled-stabilizers", "reference/qiskit-addons.md#expectation-values-from-shot-data", "reference/qiskit-addons.md#spacetime-pauli-checks-qiskit-paulice"]
+
+[[task]]
+group = "Analyze results"
+text = "Score samples by their best fraction"
+links = ["guides/techniques.md#cvar-of-sampled-results"]
+
+[[task]]
+group = "Analyze results"
+text = "Compare with a classical optimum or a Pareto front"
+links = ["reference/ecosystem.md#classical-solvers-and-multi-objective-tools"]

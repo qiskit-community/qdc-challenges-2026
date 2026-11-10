@@ -1,0 +1,65 @@
+# Bortezomib isolated ligand — STO-3G  EWF+TrimSQD  Qiskit Serverless configuration
+#
+# System:  bortezomib bound-geometry extracted ligand (three-coordinate boronic acid)
+#          53 atoms  |  charge = 0  |  spin = 0
+#
+# Scaled from hpc_demos/proteasome_ewf_sqd_demo/config_bortezomib_ligand_sto-3g.yaml
+# with Serverless-specific adjustments (same rationale as ixazomib config).
+
+# ============================================================================
+# Workflow / Molecule
+# ============================================================================
+workflow:
+  basis: sto-3g
+  charge: 0
+  spin: 0
+
+# ============================================================================
+# Embedder
+# ============================================================================
+embedder:
+  ewf:
+    bath_type: mp2
+    truncation: 1.0e-4
+    fragmentation: iao
+
+# ============================================================================
+# Solver Selection
+# ============================================================================
+solver_selection:
+  fci_threshold: 10
+  sqd_threshold: 20        # n_orb >= 20 → TrimSQD (10/42 frags for ixazomib,
+                           # 17/53 for bortezomib). Threshold=15 gives 43 QPU jobs total.
+
+# ============================================================================
+# QPU Configuration
+# ============================================================================
+qpu:
+  provider: ibm_serverless
+  backend_name: ibm_kingston
+
+  sampler_options:
+    default_shots: 100000
+
+# ============================================================================
+# SQD / TrimSQD Classical Post-Processing
+# ============================================================================
+sqd:
+  lucj:
+    n_reps: 1
+
+  classical_backend: python
+  symmetrize_spin: true
+  n_batches: 5
+  iterations: 6
+  samples_per_batch: 3000
+  max_dim: 500
+  energy_tol: 1.0e-8
+  occupancies_tol: 1.0e-5
+  carryover_threshold: 1.0e-4
+
+  trim:
+    trim_ratio: 0.15
+    sector_trim: false
+    max_strings_per_trim: 300
+    max_carryover: 400
